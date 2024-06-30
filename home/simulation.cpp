@@ -17,14 +17,7 @@ int Simulation::CountLiveNeighbors(int row, int column)
     int liveNeighbors = 0;
     std::vector<std::pair<int, int>> neighborOffsets = 
     {
-        {-1, 0}, // Directly above
-        {1, 0},  // Directly below
-        {0, -1}, // To the left
-        {0, 1},  // To the right
-        {-1, -1},// Diagonal upper left
-        {-1, 1}, // Diagonal upper right
-        {1, -1}, // Diagonal lower left
-        {1, 1}   // Diagonal lower right
+        {-1, 0}, {1, 0}, {0, -1}, {0, 1}, {-1, -1}, {-1, 1}, {1, -1}, {1, 1}   
     };
 
     for(const auto& offset : neighborOffsets)
